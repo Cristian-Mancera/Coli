@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.Android", "Messenger\Messenger.Android\Messenger.Android.csproj", "{8034D391-FE0E-4504-8A75-888DDA5EB966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger.iOS", "Messenger\Messenger.iOS\Messenger.iOS.csproj", "{14CE64D6-5036-42EC-9589-7B799229A2A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger", "Messenger\Messenger\Messenger.csproj", "{7A79F171-3A95-4C56-8CB9-413D94FA0D18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8034D391-FE0E-4504-8A75-888DDA5EB966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8034D391-FE0E-4504-8A75-888DDA5EB966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8034D391-FE0E-4504-8A75-888DDA5EB966}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8034D391-FE0E-4504-8A75-888DDA5EB966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8034D391-FE0E-4504-8A75-888DDA5EB966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8034D391-FE0E-4504-8A75-888DDA5EB966}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{14CE64D6-5036-42EC-9589-7B799229A2A3}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{14CE64D6-5036-42EC-9589-7B799229A2A3}.Debug|Any CPU.Build.0 = Debug|iPhone
+		{14CE64D6-5036-42EC-9589-7B799229A2A3}.Debug|Any CPU.Deploy.0 = Debug|iPhone
+		{14CE64D6-5036-42EC-9589-7B799229A2A3}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{14CE64D6-5036-42EC-9589-7B799229A2A3}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{14CE64D6-5036-42EC-9589-7B799229A2A3}.Release|Any CPU.Deploy.0 = Release|iPhoneSimulator
+		{7A79F171-3A95-4C56-8CB9-413D94FA0D18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A79F171-3A95-4C56-8CB9-413D94FA0D18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A79F171-3A95-4C56-8CB9-413D94FA0D18}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7A79F171-3A95-4C56-8CB9-413D94FA0D18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A79F171-3A95-4C56-8CB9-413D94FA0D18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A79F171-3A95-4C56-8CB9-413D94FA0D18}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFD03111-34FB-4E98-B663-D8104792B5A5}
+	EndGlobalSection
+EndGlobal
