@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Messenger.Models
 {
-    class Mensaje
+    public class Mensaje
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }  

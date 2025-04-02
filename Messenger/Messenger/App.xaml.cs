@@ -12,10 +12,9 @@ namespace Messenger
         public App ()
         {
             InitializeComponent();
+            MainPage = new NavigationPage(new MensajePage("chat1"));
 
-            MainPage = new Principal();
 
-            
         }
 
         protected override void OnStart ()

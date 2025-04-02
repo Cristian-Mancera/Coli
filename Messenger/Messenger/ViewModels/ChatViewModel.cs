@@ -10,10 +10,12 @@ using Xamarin.Forms;
 
 namespace Messenger.ViewModels
 {
-    class ChatViewModel : BaseViewModel
+    public class ChatViewModel : BaseViewModel
     {
         private ConexionBD _ConexionBD;
         private ObservableCollection<Mensaje> _mensajes;
+        private string _nuevoMensaje;
+
         public ICommand EnviarMensajeCommand { get; }
 
         public ObservableCollection<Mensaje> Mensajes
@@ -22,19 +24,20 @@ namespace Messenger.ViewModels
             set => SetProperty(ref _mensajes, value);
         }
 
+        public string NuevoMensaje
+        {
+            get => _nuevoMensaje;
+            set => SetProperty(ref _nuevoMensaje, value);
+        }
+
         public ChatViewModel()
         {
             _ConexionBD = new ConexionBD();
             _mensajes = new ObservableCollection<Mensaje>();
             CargarMensajes();
 
-            
-            Mensajes = new ObservableCollection<Mensaje>();
-
-           
             EnviarMensajeCommand = new Command(EnviarMensaje);
         }
-
 
         public async Task CargarMensajes()
         {
@@ -47,33 +50,25 @@ namespace Messenger.ViewModels
             }
         }
 
-
-
-        // SIMULACION
-        private void EnviarMensaje()
+        private async void EnviarMensaje()
         {
+            if (string.IsNullOrWhiteSpace(NuevoMensaje)) return;
 
             var mensaje = new Mensaje
             {
                 UsuarioId = 1,
-                Texto = "¡Hola! Este es un mensaje de prueba.",
+                Texto = NuevoMensaje,
                 ChatId = "chat1",
                 FechaEnvio = DateTime.Now
             };
 
+            
+            await _ConexionBD.InsertMensaje(mensaje);
 
+            
             Mensajes.Add(mensaje);
-            OnPropertyChanged(nameof(Mensajes));
-        }
-
-        //Imprimir mensajes
-        public void MostrarMensajes()
-        {
-            Console.WriteLine("\nMensajes:");
-            foreach (var mensaje in Mensajes)
-            {
-                Console.WriteLine($"[{mensaje.FechaEnvio}] {mensaje.Texto} (Usuario {mensaje.UsuarioId})");
-            }
+            NuevoMensaje = ""; 
         }
     }
 }
+
