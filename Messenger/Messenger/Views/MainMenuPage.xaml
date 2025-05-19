@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messenger.Views.MainMenuPage"
+             Title="COLImess"
+             BackgroundColor="White">
+
+    <Grid>
+        <!-- Contenido principal -->
+        <StackLayout Padding="20" Spacing="15">
+            <Label Text="Chats"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Start"
+                   TextColor="Black"
+                   Margin="0,10,0,10" />
+
+            <CollectionView x:Name="ChatsCollectionView"
+                            SelectionMode="Single"
+                            SelectionChanged="OnChatSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray"
+                               CornerRadius="10"
+                               Padding="10"
+                               Margin="0,8"
+                               HasShadow="True"
+                               BackgroundColor="#e0f7d7">
+                            <StackLayout Orientation="Horizontal" Spacing="15">
+                                <Image Source="chat_icon.png"
+                                       HeightRequest="40"
+                                       WidthRequest="40"
+                                       VerticalOptions="Center" />
+                                <Label Text="{Binding Nombre}"
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       TextColor="Black" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+        <!-- Botón flotante -->
+        <Button Text="+"
+        Clicked="OnAddChatClicked"
+        WidthRequest="60"
+        HeightRequest="60"
+        BackgroundColor="#4CAF50"
+        TextColor="White"
+        CornerRadius="30"
+        FontSize="30"
+        HorizontalOptions="End"
+        VerticalOptions="End"
+        Margin="20" />
+    </Grid>
+</ContentPage>

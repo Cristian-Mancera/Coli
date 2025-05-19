@@ -1,16 +1,11 @@
 ﻿using Messenger.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Messenger.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MensajePage : ContentPage
     {
         private ChatViewModel _viewModel;
@@ -18,10 +13,22 @@ namespace Messenger.Views
         public MensajePage(string chatId)
         {
             InitializeComponent();
-            _viewModel = new ChatViewModel();
+            _viewModel = new ChatViewModel(chatId);
             BindingContext = _viewModel;
-            _viewModel.CargarMensajes();
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await _viewModel.ConectarWebSocketAsync();
+            await _viewModel.CargarMensajes();
+        }
+     
+
+        protected override async void OnDisappearing()
+        {
+            base.OnDisappearing();
+            await _viewModel.DesconectarWebSocketAsync();
+        }
     }
 }

@@ -22,8 +22,11 @@ C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Me
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Messenger.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
-C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Views\ChatsPage.xaml.g.cs
+C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Views\MainMenuPage.xaml.g.cs
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Views\MensajePage.xaml.g.cs
+C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Views\NewChatPage.xaml.g.cs
+C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Views\SplashPage.xaml.g.cs
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Messenger.AssemblyInfoInputs.cache
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Messenger.AssemblyInfo.cs
 C:\Users\GUETO\source\repos\Coli\Messenger\Messenger\obj\Debug\netstandard2.0\Messenger.csproj.CoreCompileInputs.cache

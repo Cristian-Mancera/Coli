@@ -4,6 +4,11 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Android.Views;
+using Xamarin.Forms;
+using Android.Graphics;
+
+
 
 namespace Messenger.Droid
 {
@@ -13,6 +18,11 @@ namespace Messenger.Droid
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+            Window.ClearFlags(WindowManagerFlags.TranslucentStatus);
+            Window.SetStatusBarColor(Android.Graphics.Color.ParseColor("#4CAF50")); 
+
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

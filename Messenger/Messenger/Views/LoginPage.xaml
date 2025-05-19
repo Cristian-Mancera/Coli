@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Messenger.Views.LoginPage"
+             Title="Bienvenido">
+    <StackLayout Padding="20" Spacing="15" VerticalOptions="CenterAndExpand">
+        <Label Text="Ingrese su nombre" FontSize="18"/>
+        <Entry x:Name="NombreEntry" Placeholder="Nombre" />
+
+        <Label Text="Ingrese su número" FontSize="18"/>
+        <Entry x:Name="NumeroEntry" Placeholder="Número" Keyboard="Telephone"/>
+
+        <Button Text="Continuar" Clicked="OnContinuarClicked" BackgroundColor="#98eb7c" TextColor="White"/>
+    </StackLayout>
+</ContentPage>

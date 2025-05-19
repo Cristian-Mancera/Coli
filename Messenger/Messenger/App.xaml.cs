@@ -12,7 +12,20 @@ namespace Messenger
         public App ()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MensajePage("chat1"));
+
+            MainPage = new NavigationPage(new MainMenuPage())
+            {
+                BarBackgroundColor = (Color)Current.Resources["Primary"],
+                BarTextColor = Color.White
+            };
+            if (Application.Current.Properties.ContainsKey("UsuarioNombre"))
+            {
+                MainPage = new NavigationPage(new MainMenuPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
 
 
         }

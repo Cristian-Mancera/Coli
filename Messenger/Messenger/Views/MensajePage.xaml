@@ -1,9 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Messenger.Converters"
              x:Class="Messenger.Views.MensajePage"
-             Title="Mensajes"
+             Title="Chat 1"
              BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:UsuarioToColorConverter x:Key="UsuarioToColorConverter" />
+            <local:UsuarioToAlignmentConverter x:Key="UsuarioToAlignmentConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <StackLayout Padding="10" BackgroundColor="White">
 
@@ -15,9 +23,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame Padding="10" CornerRadius="10" HasShadow="True" BackgroundColor="#f5f5f5"
-                               Margin="0,5,0,5">
-                            <!-- Agrega separación entre mensajes -->
+                        <Frame Padding="10" CornerRadius="10" HasShadow="True" Margin="0,5,0,5"
+                               BackgroundColor="{Binding UsuarioId, Converter={StaticResource UsuarioToColorConverter}}"
+                               HorizontalOptions="{Binding UsuarioId, Converter={StaticResource UsuarioToAlignmentConverter}}">
                             <StackLayout>
                                 <Label Text="{Binding Texto}" FontSize="16" TextColor="Black"/>
                                 <Label Text="{Binding FechaEnvio, StringFormat='{0:G}'}" 
@@ -41,7 +49,7 @@
                        HorizontalOptions="FillAndExpand"/>
                 <Button Text="Enviar"
                         Command="{Binding EnviarMensajeCommand}"
-                        BackgroundColor="#007AFF"
+                        BackgroundColor="#98eb7c"
                         TextColor="White"
                         CornerRadius="10"
                         Padding="10,5"/>
